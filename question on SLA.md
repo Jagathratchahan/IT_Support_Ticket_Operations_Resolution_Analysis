@@ -1,15 +1,15 @@
 -------QUESTION RELATED TO Service Level Agreement------
 
-BUSINESS QUESTION:- 
-  Are customer tickets resolved within the SLA target resolution time? If not, where are the SLA breaches occurring?
+BUSINESS Problem:- 
+  Identify tickets that do not comply with the  SLA and how to rectify them.
   
 BUSINESS INSIGHT:-
- The dashboard helps the manager focus on where to resolve and inform customers when the problem is fixed.
+ The dashboard helps the manager identify tickets that breached SLA compliance.
 
 
 KEY CONCEPT:- What is a Service Level Agreement breach?
 
-A failure to meet the agreed-upon performance goals, response times, or uptime standards set in a contract between a service provider and a customer.In this case, a resolution time violation.
+A failure to meet the  performance goals, response times, or uptime standards in a contract between a service provider and a customer.In this case, a resolution time violation.
 Example: If a High-severity ticket takes 11 hours, then:
 
 Target resolution time(Set by SLA policy) = 8 hours
@@ -18,7 +18,6 @@ SLA breach = Yes
 Delay = 3 hours
 
 -------------------- ADDITIONAL COLUMN ADDED APART FROM ACTUAL RAW DATA COLUMNS-----------------
-
 
 Columns added are as follows:
   SLA Breach Flag (Column name) 
@@ -71,8 +70,8 @@ The dashboard answers the following questions and provides much more insights
 
 → Which individual tickets need attention?
 
+<img width="1368" height="887" alt="Screenshot 2026-09-28 132432" src="https://github.com/user-attachments/assets/760ed3fc-2ce3-4189-a711-eb13b732a1e2" />
 
-<img width="1874" height="925" alt="image" src="https://github.com/user-attachments/assets/938a4076-6b31-447e-8cce-46008b173c72" />
 
 
 
