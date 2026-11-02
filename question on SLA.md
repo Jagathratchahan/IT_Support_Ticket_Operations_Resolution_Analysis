@@ -1,5 +1,3 @@
--------QUESTION RELATED TO Service Level Agreement------
-
 BUSINESS Problem:- 
   Identify tickets that do not comply with the  SLA and how to rectify them.
   
@@ -9,7 +7,7 @@ BUSINESS INSIGHT:-
 
 KEY CONCEPT:- What is a Service Level Agreement breach?
 
-A failure to meet the  performance goals, response times, or uptime standards in a contract between a service provider and a customer.In this case, a resolution time violation.
+A failure to meet the  performance goals, response times, or uptime standards in an agreement between a service provider and a customer.In this case, an SLA violation.
 Example: If a High-severity ticket takes 11 hours, then:
 
 Target resolution time(Set by SLA policy) = 8 hours
@@ -17,7 +15,7 @@ Actual = 11 hours
 SLA breach = Yes
 Delay = 3 hours
 
--------------------- ADDITIONAL COLUMN ADDED APART FROM ACTUAL RAW DATA COLUMNS-----------------
+ADDITIONAL COLUMN ADDED APART FROM ACTUAL RAW DATA COLUMNS
 
 Columns added are as follows:
   SLA Breach Flag (Column name) 
@@ -30,25 +28,23 @@ IF(
 )
 
  SLA Status (Column name)
-DAX EXPRESSION - SLA Status = 
-IF(
+ DAX EXPRESSION - SLA Status = 
+ IF(
     'ticket_raw_data'[Resolution Time (Hrs)]
         > 'ticket_raw_data'[Target Resolution Time],
     "Breach",
     "Within SLA"
-)
+ )
 
-SLA Breach % - DAX MEASURE
-SLA Breach % = 
-DIVIDE(
+ SLA Breach % - DAX MEASURE
+ SLA Breach % = DIVIDE(
     SUM('ticket_raw_data'[SLA Breach Flag]),
     COUNTROWS('ticket_raw_data'),
     0
-)
+ )
 
-AVERAGE SLA Delay - DAX MEASURE
-Average SLA Delay = 
-AVERAGEX(
+ AVERAGE SLA Delay - DAX MEASURE
+ Average SLA Delay = AVERAGEX(
     FILTER(
         'ticket_raw_data',
         'ticket_raw_data'[SLA Breach Flag] = 1
@@ -56,9 +52,7 @@ AVERAGEX(
     'ticket_raw_data'[Resolution Time (Hrs)]
         - 'ticket_raw_data'[Target resolution time]
 )
-
-
---------------BUSINESS INSIGHT DASHBOARD--------------
+BUSINESS INSIGHT DASHBOARD
 
 The dashboard answers the following questions and provides much more insights
 
@@ -70,7 +64,7 @@ The dashboard answers the following questions and provides much more insights
 
 → Which individual tickets need attention?
 
-<img width="1368" height="887" alt="Screenshot 2026-09-28 132432" src="https://github.com/user-attachments/assets/760ed3fc-2ce3-4189-a711-eb13b732a1e2" />
+<img src="SLA.png" alt="Alternative text" width="1000">
 
 
 
