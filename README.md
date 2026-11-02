@@ -2,6 +2,7 @@
 A data analysis project on the IT Helpdesk's tickets.
 
 This project visualises a dashboard summarising the key findings of the "IT Support Ticket Operations Resolution Analysis" project.
+
 Business Problem:
 
 
@@ -11,7 +12,7 @@ The Customer Support department of an e-commerce platform handled over 15,000 in
 Leadership lacked visibility into key operational bottlenecks:
 Unresolved ticket backlogs were increasing with no clear tracking of SLA breaches.
 High Average Delay Time (AHT) was reducing Customer Satisfaction (CSAT) scores.
-Support managers could not identify workload imbalances among agents or high-friction product categories causing ticket spikes.
+Support managers could not identify workload imbalances among agents or high-friction product category.
 
 
 Task:
@@ -32,10 +33,17 @@ DAX Metric Calculation: Engineered DAX measures for core metrics.
 <img src="SLA.png" alt="Dashboard's SLA page" width= "1000">
 
 BusinessProblem.md file describes some common business questions and answers.
+
 Challenges.md file describes
+
 TicketSummary.png contains the dashboard's homepage.
+
 SLA.png contains the SLA related charts.
+
 dataset.xlsx is the source raw data used for the project. It has less data because it is dummy data. Real Power BI can process more than 15000 records.
-powerBI.pbix is the project's code.
+
+PowerBI.pbix is the project file.
+
+SLA_questions.md describes SLA questions and answers. 
 
 
